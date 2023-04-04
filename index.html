@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>尋找公主的故事</title>
+
+        
+        <!-- 不同設備的 CSS      CSS for different devices -->
+        <!-- 電腦 Personal Computer -->
+        <link rel="stylesheet" media="screen and (min-device-width: 640px)" href="./Personal-Computer.css" />
+        <!-- 行動裝置 Mobile Devices    -->
+        <link rel="stylesheet" media="screen and (max-device-width: 640px)" href="./Mobile-Devices.css" />
+
+    </head>
+    <body>
+        <!--標題-->
+        <div id="Title">
+            <h1>尋找公主的故事</h1>
+        </div>
+
+        <!--Setting-->
+        <div id="Settings-Button-div">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <!--Links to different language-->
+        <div class="hidden" id="Settings-Content-div">
+            語言:
+            <a href="index-en.html">English</a>
+        </div>
+        <script>
+            document.getElementById("Settings-Button-div").addEventListener("click",function show_Settings() {
+                if(document.getElementById("Settings-Content-div").classList.contains("hidden"))
+                {
+                    document.getElementById("Settings-Content-div").classList.remove("hidden");
+                }
+                else{
+                    document.getElementById("Settings-Content-div").classList.add("hidden");
+                }
+            })
+        </script>
+
+        <!--Content-->
+        <div id="Main-Buttons-div">
+            <button class="Main-Button" onclick="showDiv('Div1')">劇情</button>
+            <button class="Main-Button" onclick="showDiv('Div2')">Show Div 2</button>
+            <button class="Main-Button" onclick="showDiv('Div3')">Show Div 3</button>
+            <button class="Main-Button" onclick="showDiv('Div4')">Show Div 4</button>
+            <button class="Main-Button" onclick="showDiv('Div5')">参考</button>
+        </div>
+        <div id="Main-Content">
+            <div id="Div1">這個劇情描述了一個勇者救出被怪物抓走的公主的故事。國王為了救回公主，宣布嫁給救公主的勇者。勇者為了達成任務，必須先收集足夠的黑曜石激活傳送門，進入城堡內救出公主。然而，在地獄中，魔王阻礙了勇者的行動，勇者不得不與魔王戰鬥，最終成功救出了公主。整個故事充滿了冒險和挑戰，描繪了勇者為了愛和正義所做出的勇敢行動。</div>
+            <div id="Div2" class="hidden">Div 2 to show/hide</div>
+            <div id="Div3" class="hidden">Div 3 to show/hide</div>
+            <div id="Div4" class="hidden">Div 4 to show/hide</div>
+            <div id="Div5" class="hidden">
+                参考游戏：
+
+                Mardek - Play on Armor Games
+                
+                战斗场景参考视频：
+                Game Maker :Fighting Game Tutorial # Part 1 - YouTube
+                </div>
+        </div>
+        <script type="text/javascript">
+            function showDiv(id) {
+                var element = document.getElementById(id);
+                if (element.id === "Div1") {
+                    element.classList.remove("hidden");
+                    document.getElementById("Div2").classList.add("hidden");
+                    document.getElementById("Div3").classList.add("hidden");
+                    document.getElementById("Div4").classList.add("hidden");
+                    document.getElementById("Div5").classList.add("hidden");
+                } else if (element.id === "Div2") {
+                    element.classList.remove("hidden");
+                    document.getElementById("Div1").classList.add("hidden");
+                    document.getElementById("Div3").classList.add("hidden");
+                    document.getElementById("Div4").classList.add("hidden");
+                    document.getElementById("Div5").classList.add("hidden");
+                } else if (element.id === "Div3") {
+                    element.classList.remove("hidden");
+                    document.getElementById("Div1").classList.add("hidden");
+                    document.getElementById("Div2").classList.add("hidden");
+                    document.getElementById("Div4").classList.add("hidden");
+                    document.getElementById("Div5").classList.add("hidden");
+                } else if (element.id === "Div4") {
+                    element.classList.remove("hidden");
+                    document.getElementById("Div1").classList.add("hidden");
+                    document.getElementById("Div2").classList.add("hidden");
+                    document.getElementById("Div3").classList.add("hidden");
+                    document.getElementById("Div5").classList.add("hidden");
+                } else if (element.id === "Div5") {
+                    element.classList.remove("hidden");
+                    document.getElementById("Div1").classList.add("hidden");
+                    document.getElementById("Div2").classList.add("hidden");
+                    document.getElementById("Div3").classList.add("hidden");
+                    document.getElementById("Div4").classList.add("hidden");
+                }
+            }
+        </script>
+
+    </body>
+</html>

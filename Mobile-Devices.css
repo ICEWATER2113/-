@@ -1,0 +1,58 @@
+#Title{
+    width : 100%;
+    color : aqua;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Settings */
+#Settings-Button-div{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    width: 8%;
+}
+#Settings-Content-div{
+    position: absolute;
+    top: 9%;
+    right: 3%;
+    width: 20%;
+    z-index: 1;
+    background-color: white;
+}
+
+
+/* Main */
+/* #region */
+#Main-Buttons-div{
+    position: relative;
+    left: 1%;
+    width: 98%;
+    height: 50px;
+    border: 1px black solid;
+    padding: 0%;
+}
+
+.Main-Button{
+    position: relative;
+    margin: 0%;
+    width: 20%;
+    height: 50px;
+    float: left;
+    border: 1px solid blue
+}
+
+#Main-Content{
+    margin-top: 2%;
+    border: 1px black solid;
+    position: relative;
+    left: 1%;
+    width: 98%;
+}
+
+/* #endregion */
+
+
+
